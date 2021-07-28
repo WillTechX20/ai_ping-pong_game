@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>AI Ping-Pong Game</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/addons/p5.sound.min.js"></script>   
+    </head>
+    <body>
+        <h1>AI Ping Pong Game</h1>
+        <div class="modal" style="display: none;">
+            <div class="modal_content">
+                <div class="modal_header">
+                    <h2>Instructions</h2>
+                    <span class="modal_close_button" onclick="this.parentElement.parentElement.parentElement.style.display='none';">&times;</span>
+                </div>
+                <div class="modal_body">
+                    <p>This game is played like regular ping-pong except that to move your paddle,
+                    you must move your wrists either up or down.</p>
+                </div>
+                <div class="modal_footer"><p>Made by: Will N. Okoye</p></div>
+            </div>
+        </div>
+        <input type="button" value="Instructions" onclick="document.querySelector('.modal').style.display='block';">
+        <input type="button" value="Start Game" onclick="startGame();">
+        <input type="button" value="Restart Game" onclick="restartGame();">
+        <div class="game_container"></div>
+        <div class="game_status">Game Status: None</div>
+        <footer>
+            <p>Made by Will N. Okoye!</p>
+            <div class="script">
+                <script src="main.js"></script>
+            </div>
+        </footer>
+    </body>
+</html>
